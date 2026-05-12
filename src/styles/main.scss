@@ -1,6 +1,33 @@
-@import 'utils';
-@import 'fonts';
-@import 'typography';
+@use 'utils/index' as *;
+@use 'aside/index' as *;
+@use 'typography' as *;
+@use 'fonts' as *;
+@use 'blocks/index';
+@use 'header/header' as *;
+
+.page {
+  position: relative;
+  scroll-behavior: smooth;
+
+  &__video {
+    position: fixed;
+    display: none;
+
+    width: 100%;
+    height: 100vh;
+
+    top: 0;
+    z-index: 1;
+  }
+
+  &__menu {
+    @include aside;
+  }
+
+  &__language {
+    @include aside;
+  }
+}
 
 body {
   background: $c-gray;
