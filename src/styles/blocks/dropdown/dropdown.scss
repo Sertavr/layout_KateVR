@@ -1,3 +1,23 @@
+@use '../../utils/index' as *;
+
 .dropdown {
-  display: none;
+  border: 1px solid $bg-button;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px $bg-button;
+  background-color: $bg-aside;
+
+  &__item {
+    @extend %nav-text;
+
+    padding: 5px 10px;
+    cursor: pointer;
+    color: $white;
+
+    @include hover(background-color, $bg-aside-link);
+    @include hover(color, $bg-button);
+
+    &--active {
+      background-color: $bg-aside-link;
+    }
+  }
 }

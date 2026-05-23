@@ -34,7 +34,6 @@
 
   @include on-desktop {
     padding-inline: 110px;
-
   }
 
   @include on-design {
@@ -56,7 +55,7 @@
   }
 
   @include on-desktop {
-    --columns: 12
+    --columns: 12;
   }
 
   @include on-design {
@@ -66,19 +65,37 @@
 
 @mixin aside {
   position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    transform: translateY(-100%);
+  top: 0;
+  right: 0;
+  left: 0;
+  transform: translateY(-100%);
 
-    z-index: 2;
+  z-index: 2;
 
-    opacity: 0;
+  opacity: 0;
 
-    transition: $transition;
+  transition: $transition;
 
-    &:target {
-      transform: translateY(0);
-      opacity: 1;
-    }
+  &:target {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@mixin line-clamp($lines) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+  line-clamp: $lines;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin after($path) {
+  position: absolute;
+  display: block;
+  content: '';
+  background-image: url($path);
+  background-repeat: no-repeat;
+  background-size: contain;
 }

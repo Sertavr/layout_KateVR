@@ -81,7 +81,6 @@
       -webkit-mask-repeat: no-repeat;
       -webkit-mask-position: center;
       -webkit-mask-size: contain;
-
     }
 
     @include hover(color, $white);
@@ -118,7 +117,6 @@
     background-size: contain;
     background-position: center;
 
-
     @include hover(transform, scale(1.2));
 
     @include on-tablet {
@@ -132,6 +130,10 @@
 
     &--close {
       background-image: url(../images/icons/header/close.svg);
+
+      @include on-desktop {
+        display: block;
+      }
     }
 
     &--back {

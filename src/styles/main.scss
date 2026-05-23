@@ -4,6 +4,7 @@
 @use 'fonts' as *;
 @use 'blocks/index';
 @use 'header/header' as *;
+@use 'main/index' as *;
 
 .page {
   position: relative;
@@ -17,7 +18,7 @@
     height: 100vh;
 
     top: 0;
-    z-index: 1;
+    z-index: 5;
   }
 
   &__menu {
@@ -25,6 +26,14 @@
   }
 
   &__language {
+    @include aside;
+  }
+
+  &__help {
+    @include aside;
+  }
+
+  &__faq {
     @include aside;
   }
 }
