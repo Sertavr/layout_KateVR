@@ -82,15 +82,6 @@
   }
 }
 
-@mixin line-clamp($lines) {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: $lines;
-  line-clamp: $lines;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 @mixin after($path) {
   position: absolute;
   display: block;
@@ -98,4 +89,30 @@
   background-image: url($path);
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+@mixin line-clamp($line) {
+  display: -webkit-box;
+  line-clamp: $line;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin input-field($height) {
+  width: 100%;
+  height: $height;
+  border-bottom: 1px solid $br-input;
+  background-color: $bg-dark-main;
+}
+
+@mixin mask($path) {
+  mask-image: url($path);
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: contain;
+      -webkit-mask-image: url($path);
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+      -webkit-mask-size: contain;
 }

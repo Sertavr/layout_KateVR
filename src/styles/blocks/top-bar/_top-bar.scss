@@ -14,6 +14,10 @@
     padding-block: 47px 101px;
   }
 
+  &--aside, &--faq {
+    padding: 0;
+  }
+
   &--menu {
     justify-content: end;
   }
@@ -42,6 +46,7 @@
   }
 
   &__lang {
+    position: relative;
     display: none;
     margin-right: auto;
     margin-left: 35px;
@@ -58,6 +63,7 @@
     height: 20px;
     color: $bg-button;
     background-color: transparent;
+    cursor: pointer;
 
     &::after {
       position: absolute;
@@ -88,6 +94,10 @@
     &:hover::after {
       background-color: $white;
     }
+  }
+
+  &__lang-list {
+    position: absolute;
   }
 
   &__nav-container {

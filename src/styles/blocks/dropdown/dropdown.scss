@@ -1,10 +1,17 @@
 @use '../../utils/index' as *;
 
 .dropdown {
-  border: 1px solid $bg-button;
+  max-height: 0;
+  overflow: hidden;
   border-radius: 5px;
-  box-shadow: 0 0 10px 2px $bg-button;
   background-color: $bg-aside;
+  transition: all $transition;
+
+  &--open {
+    max-height: 280px;
+    border: 1px solid $bg-button;
+    box-shadow: 0 0 10px 2px $bg-button;
+  }
 
   &__item {
     @extend %nav-text;

@@ -25,14 +25,21 @@ const setListener = (element) => {
       return;
     }
 
+    if (!li.closest('aside')) {
+      langList.classList.toggle('dropdown--open');
+    }
+
     const language = li.getAttribute('data-lang');
 
     setActiveLangItem(langItems, language, 'dropdown__item--active');
     setActiveLangItem(asideLangItems, language, 'language__item--active');
     langButton.textContent = language;
   });
-}
+};
+
+langButton.addEventListener('click', () => {
+  langList.classList.toggle('dropdown--open');
+});
 
 setListener(langList);
 setListener(asideLangList);
-

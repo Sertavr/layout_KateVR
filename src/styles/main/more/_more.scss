@@ -64,13 +64,10 @@
     grid-column: 1 / -1;
 
     padding: 5px;
+    border-radius: 5px;
     cursor: pointer;
 
-    display: -webkit-box;
-    line-clamp: 2;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+
     transition: all $transition;
 
     &:hover {
@@ -79,6 +76,8 @@
       line-clamp: none;
       -webkit-line-clamp: none;
     }
+
+    @include line-clamp(3);
 
     @include on-tablet {
       grid-column: span 3;

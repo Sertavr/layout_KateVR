@@ -28,28 +28,6 @@ export const aboutSwiper = new Swiper('.aboutSwiper', {
       );
     },
   },
-  // pagination: {
-  //   el: '.about__pagination',
-  // },
-  // breakpoints: {
-  //   1280: {
-  //     pagination: {
-  //       el: '.about__pagination',
-  //       type: 'fraction',
-  //       renderFraction: function (currentClass, totalClass) {
-  //         return (
-  //           '<span class="' +
-  //           currentClass +
-  //           '"></span>' +
-  //           '<span class="divider">/</span>' +
-  //           '<span class="' +
-  //           totalClass +
-  //           '"></span>'
-  //         );
-  //       },
-  //     },
-  //   },
-  // },
   scrollbar: {
     el: '.aboutSwiper__scrollbar',
   },

@@ -222,4 +222,30 @@
     }
   }
 
+  &__ellips {
+    display: none;
+    position: absolute;
+    width: 40px;
+    height: 200px;
+    top: 15%;
+    background-image: url(../images/icons/main/ellipse.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    transform-origin: 150px 105px;
+    animation: orbit 3s ease-in-out infinite alternate;
+
+    @include on-desktop {
+      display: block;
+    }
+  }
+
+  @keyframes orbit {
+    from {
+      transform: rotate(-40deg);
+    }
+    to {
+      transform: rotate(40deg);
+    }
+  }
 }

@@ -4,11 +4,23 @@
 @use 'fonts' as *;
 @use 'blocks/index';
 @use 'header/header' as *;
+@use 'footer/footer' as *;
 @use 'main/index' as *;
 
 .page {
   position: relative;
   scroll-behavior: smooth;
+  background-color: $bg-dark-main;
+
+  &:has(
+    .page__menu:target,
+    .page__language:target,
+    .page__help:target,
+    .page__faq:target,
+    .page__video:target
+  ) {
+    overflow: hidden;
+  }
 
   &__video {
     position: fixed;
