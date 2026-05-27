@@ -42,7 +42,8 @@
     @include on-desktop {
       grid-column: 2 / span 10;
       padding: 60px 90px 75px;
-      margin-top: 134px;
+      
+      // margin-top: 134px;
       background-color: $bg-aside;
     }
 

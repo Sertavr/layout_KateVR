@@ -30,8 +30,6 @@
     @include on-desktop {
       grid-column: 2 / span 10;
       background-color: $bg-aside;
-      
-      // margin-top: 134px;
       padding: 60px 90px;
     }
   }
