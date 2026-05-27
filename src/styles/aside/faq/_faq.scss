@@ -3,6 +3,7 @@
 .faq {
   height: 100vh;
   background-color: $bg-aside-main;
+  overflow: scroll;
 
   &__container {
     height: 100vh;
@@ -15,7 +16,7 @@
     @include on-tablet {
       padding-top: 34px;
     }
-    
+
     @include on-desktop {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
@@ -29,7 +30,8 @@
     @include on-desktop {
       grid-column: 2 / span 10;
       background-color: $bg-aside;
-      margin-top: 134px;
+      
+      // margin-top: 134px;
       padding: 60px 90px;
     }
   }
