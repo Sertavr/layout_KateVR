@@ -109,6 +109,8 @@
     display: none;
     width: 200px;
     height: 48px;
+    line-height: 48px;
+    text-align: center;
 
     @include on-desktop {
       display: block;

@@ -3,6 +3,7 @@ import { phone } from './constants';
 
 const form = document.querySelector('.form');
 const inputs = document.querySelectorAll('.form__input');
+const textarea = document.querySelector('.form__textarea');
 const button = document.querySelector('.form__button');
 
 const emailValidation = (email) => pattern.test(email);
@@ -54,6 +55,8 @@ form.addEventListener('submit', (event) => {
   if (!isValid) return;
 
   fields.forEach(({ input }) => input.value = '');
+  textarea.value = '';
+  button.disabled = true;
 
   // here can add form submission logic
 });
