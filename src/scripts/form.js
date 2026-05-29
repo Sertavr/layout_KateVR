@@ -59,4 +59,5 @@ form.addEventListener('submit', (event) => {
   button.disabled = true;
 
   // here can add form submission logic
+  //...
 });
